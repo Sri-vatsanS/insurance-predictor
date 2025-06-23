@@ -7,11 +7,11 @@ st.title('Insurance Charges Prediction')
 
 # Load the model and expected features
 try:
-    model_bundle = joblib.load('gbmreg_model.pkl')
+    model_bundle = joblib.load('gbmreg_model(1).pkl')
     model = model_bundle['model']
     expected_columns = model_bundle['features']
 except FileNotFoundError:
-    st.error("Model file not found. Please ensure 'gbmreg_model.pkl' exists.")
+    st.error("Model file not found. Please ensure 'gbmreg_model(1).pkl' exists.")
     st.stop()
 except Exception as e:
     st.error(f"Error loading model: {e}")
